@@ -13,7 +13,7 @@ while (num < 10)
 {
 putchar((num % 10) + '0');
 putchar(',');
-putchar('\t');
+putchar(' ');
 num++;
 }
 putchar('\n');
