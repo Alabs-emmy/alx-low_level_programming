@@ -27,7 +27,7 @@ int main(void)
 		else
 		{
 			hold2 = ef1 + ef2;
-			bk1 = ef2, ef2 = hold2;
+			ef1 = ef2, ef2 = hold2;
 			printf("%lu", ef2);
 		}
 		if (count != 97)
