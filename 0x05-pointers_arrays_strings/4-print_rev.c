@@ -5,7 +5,7 @@
  * @s: params
  *
  */
-void print_rev(char *s);
+void print_rev(char *s)
 {
 	int i, sum;
 
