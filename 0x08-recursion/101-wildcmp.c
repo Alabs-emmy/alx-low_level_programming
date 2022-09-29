@@ -50,7 +50,7 @@ int wildcmp(char *s1, char *s2)
 int find_str(char *s, char w, int x, int z)
 {
 	if (*(s + x) == '\0')
-		return (p + 1);
+		return (z + 1);
 	else if (*(s + x) == w || *(s + x) == '*')
 		z = x;
 
