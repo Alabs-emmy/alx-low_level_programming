@@ -12,4 +12,8 @@ int is_prime_number(int n);
 int help(int n, int i);
 int help_prime(int n, int m);
 int _sqrt_root(int n, int l);
+int is_palidrome(char *s);
+int get_length(char *s);
+int my_pal(char *s, int l);
+
 #endif /* _MAIN_H */
