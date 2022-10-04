@@ -31,7 +31,10 @@ char *str_concat(char *s1, char *s2)
 	int size1, size2, i, size_sum;
 	char *ptr;
 
-	if ((s1 == NULL || s2 == NULL) || (s1 == NULL && s2 == NULL))
+	if (s1 == NULL)
+		return (NULL);
+
+	if (s2 == NULL)
 		return (NULL);
 
 	size1 = _strlen(s1);
