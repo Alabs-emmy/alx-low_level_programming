@@ -10,7 +10,7 @@
  *
  * Return: Returns a pointer to array or NULL if it fails
  */
-cahr *create_array(unsigned int size, char c);
+char *create_array(unsigned int size, char c);
 {
 	char *ptr;
 
