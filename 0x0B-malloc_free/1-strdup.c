@@ -23,6 +23,9 @@ char *_strdup(char *str)
 	/* +1 space for '\0' */
 	ptr = malloc((sizeof(*str) * i) + 1);
 
+	if (ptr == NULL)
+		return (NULL);
+
 	for (size = 0; size < i; size++)
 		ptr[size] = str[size];
 
