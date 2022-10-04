@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 
 /**
  * **aloc_grid - function returns a pointer to a 2 dimensional
