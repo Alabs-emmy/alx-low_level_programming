@@ -8,7 +8,7 @@
  *
  * Return: Returns the length of str
  */
-int _strlen(int *str)
+int _strlen(char *str)
 {
 	int count;
 
@@ -20,7 +20,7 @@ int _strlen(int *str)
 
 
 /**
- * *_str_concat - function concatenates two given string
+ * *str_concat - function concatenates two given string
  * @s1: first string
  * @s2: seconmd string
  *
