@@ -3,14 +3,14 @@
 #include "main.h"
 
 /**
- * **aloc_grid - function returns a pointer to a 2 dimensional
+ * **alloc_grid - function returns a pointer to a 2 dimensional
  *		arrays of integer
  * @width: numbr of columns
  * @height: number of rows
  *
  * Return: Returns a pointer to a 2-dimensional array
  */
-int **alloc_grid(int width, int height);
+int **alloc_grid(int width, int height)
 {
 	int j, i, **ptr;
 
