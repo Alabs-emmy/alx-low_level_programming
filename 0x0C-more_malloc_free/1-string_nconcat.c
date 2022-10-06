@@ -24,8 +24,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	size_1 = _strlen(s1);
 	/* +1 memory space foe '\0' */
 	new_string_size = (size_1 + n + 1);
-	new_string = malloc(new_string * sizeof(*ptr));
-	if (ptr == NULL)
+	new_string = malloc(new_string_size * sizeof(*new_string));
+	if (new_string == NULL)
 		return (NULL);
 
 	for (i = 0; i < new_string_size; i++)
@@ -51,5 +51,7 @@ int _strlen(char *str)
 	int count;
 
 	for (count = 0; str[count] != '\0'; count++)
-		return (count);
+		;
+
+	return (count);
 }
