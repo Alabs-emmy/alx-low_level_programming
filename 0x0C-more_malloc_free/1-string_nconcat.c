@@ -32,8 +32,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		if (i < size_1)
 			*(new_string + i) = *(s1 + i);
+
 		else
 			*(new_string + i) = *(s2 + (i - size_1));
+
 	}
 	*(new_string + i) = '\0';
 	return (new_string);
