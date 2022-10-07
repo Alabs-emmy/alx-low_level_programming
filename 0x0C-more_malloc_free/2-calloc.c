@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <main.h>
+#include "main.h"
 
 /**
  * *_calloc - allocates memory for an array and initializes it to zero
@@ -35,13 +35,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
-	char **ptr;
+	char *ptr;
 
-	ptr = s
+	ptr = s;
 
 	while (n--)
 		*ptr++ = b;
+
 	return (ptr);
 }
 
