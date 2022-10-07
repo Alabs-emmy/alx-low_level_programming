@@ -23,7 +23,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	size_1 = _strlen(s1);
 	/* +1 memory space foe '\0' */
-	new_string_size = (size_1 + n + 1);
+	new_string_size = (size_1 + n);
 	new_string = malloc(new_string_size * sizeof(*new_string));
 	if (new_string == NULL)
 		return (NULL);
@@ -37,7 +37,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			*(new_string + i) = *(s2 + (i - size_1));
 
 	}
-	/* *(new_string + i) = '\0';*/
+	*(new_string + i) = '\0';
 	return (new_string);
 }
 
