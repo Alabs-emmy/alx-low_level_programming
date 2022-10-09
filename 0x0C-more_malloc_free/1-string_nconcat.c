@@ -13,28 +13,33 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int size_1, i, new_string_size;
+	int i, size_1, size_2, m;
 	char *new_string;
 
+	size_1 = _strlen(s1);
+	size_2 = _strlen(s2);
 	if (s1 == NULL)
 		s1 = "";
+
 	if (s2 == NULL)
 		s2 = "";
 
-	size_1 = _strlen(s1);
-	/* +1 memory space foe '\0' */
-	new_string_size = (size_1 + n);
-	new_string = malloc(new_string_size * sizeof(*new_string));
+	if (n < (unsigned int)size_2)
+		new_string = malloc(size_1 + n * sizeof(char) + 1);
+
+	else
+		new_string = malloc(size_1 + size_2 * sizeof(char) + 1);
+
 	if (new_string == NULL)
 		return (NULL);
 
-	for (i = 0; i < new_string_size; i++)
+	for (i = 0, c = 0; new_string[i] != '\0'; i++)
 	{
 		if (i < size_1)
 			*(new_string + i) = *(s1 + i);
 
 		else
-			*(new_string + i) = *(s2 + (i - size_1));
+			*(new_string + i) = *(s2 + c++);
 
 	}
 	*(new_string + i) = '\0';
