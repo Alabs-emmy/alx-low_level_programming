@@ -1,4 +1,4 @@
-#include "main.h"
+#include "function_pointers.h"
 
 /**
  * print_name - function takes in a string and a function pointer to print
