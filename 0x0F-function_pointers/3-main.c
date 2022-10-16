@@ -24,7 +24,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	op = argv[2];
 	num2 = atoi(argv[3]);
 
-	if (get_op_func(op) == NULL || op[0] != '\0')
+	if (get_op_func(op) == NULL || *op != "+" || *op != "-" || *op != "/" || *op != "*" || *op != "%" )
 	{
 		printf("Error\n");
 		exit(99);
