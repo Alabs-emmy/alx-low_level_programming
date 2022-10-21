@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 
 /**
  * print_list - prints all the elements of a struct
@@ -8,22 +8,20 @@
  */
 size_t print_list(const list_t *h)
 {
-	list_t *ptr;
 	size_t count;
 
-	ptr = h;
-	if (ptr == NULL)
-		return (NULL);
+	if (h == NULL)
+		return ((long unsigned int)NULL);
 	count = 0;
-	while (ptr != NULL)
+	while (h != NULL)
 	{
-		if (ptr->str == NULL)
+		if (h->str == NULL)
 			printf("[0] (nil)\n");
 
 		else
-			printf("[%d] %s\n", ptr->len, ptr->str);
+			printf("[%d] %s\n", h->len, h->str);
 
-		ptr = ptr->next;
+		h = h->next;
 		count++;
 	}
 	return (count);
