@@ -10,7 +10,8 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	char *str1;
-	list_t *ptr_new, last_node;
+	int i;
+	list_t *ptr_new, *last_node;
 
 	if (!head)
 		return (NULL);
@@ -31,7 +32,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		;
 	ptr_new->str = str1;
 	ptr_new->len = i;
-	ptr->next = NULL;
+	ptr_new->next = NULL;
 
 	if (*head == NULL)
 		*head = ptr_new;
@@ -44,5 +45,5 @@ list_t *add_node_end(list_t **head, const char *str)
 
 		last_node->next = ptr_new;
 	}
-	return (*head)
-
+	return (*head);
+}
