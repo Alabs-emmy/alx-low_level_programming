@@ -4,7 +4,7 @@
  * flip_bits - function that counts the number of bits to flip
  *		to get from one number to another.
  * @n: first number
- * @m second number to flip n to
+ * @m: second number to flip n to
  *
  * Return: returns the count of number flipped.
  */
