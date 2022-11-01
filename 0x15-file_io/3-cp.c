@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
 	buffer = malloc(sizeof(char) * 1024);
 	if (buffer == NULL)
-		exit(99);
+		return (0);
 
 	fd_1 = open(argv[1], O_RDONLY);
 	r = read(fd_1, buffer, 1024);
@@ -77,6 +77,4 @@ int close_file(int flieds)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", flieds);
 		exit(100);
 	}
-	return (1);
-
 }
