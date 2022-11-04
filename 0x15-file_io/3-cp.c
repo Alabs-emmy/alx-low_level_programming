@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
  *
  * Return: on success - 1
  */
-int close_file(int flieds)
+void close_file(int flieds)
 {
 	int c;
 
