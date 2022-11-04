@@ -20,7 +20,8 @@ void close_file(int flieds);
  */
 int main(int argc, char *argv[])
 {
-	int fd_1, fd_2, w, r;
+	int fd_1, fd_2;
+	ssize_t w, r;
 	char *buffer;
 
 	if (argc != 3)
