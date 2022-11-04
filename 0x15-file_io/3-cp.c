@@ -1,5 +1,7 @@
 #include "main.h"
 
+void close_file(int flieds);
+
 /**
  * main - main function copies the content of a file to another file.
  * @argc: number of arguement to program count.
