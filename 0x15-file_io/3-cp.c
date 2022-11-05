@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 	do {
 		if (fd_1 == -1 || r == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: can't read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			free(buffer);
 			exit(98);
 		}
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 		w = write(fd_2, buffer, r);
 		if (fd_2 == -1 || w == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: cant write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(buffer);
 			exit(99);
 		}
